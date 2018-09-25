@@ -40,11 +40,7 @@
 
 -(void)initSetting{
     BOOL newSys = [UIDevice currentDevice].systemVersion.doubleValue >= 10.0;
-    setting = @{@"wifi": (newSys?@"App-Prefs:root=WIFI" : @"prefs:root=WIFI"),
-                @"location": (newSys?@"App-Prefs:root=Privacy&path=LOCATION" : @"prefs:root=Privacy&path=LOCATION"),
-                @"bluetooth": (newSys?@"App-Prefs:root=Bluetooth" : @"prefs:root=Bluetooth"),
-                @"airplane": (newSys?@"App-Prefs:root=AIRPLANE_MODE" : @"prefs:root=AIRPLANE_MODE")
-                };
+    setting = @{};
 }
 
 RCT_EXPORT_MODULE();
